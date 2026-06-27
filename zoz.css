@@ -276,7 +276,7 @@ body {
 
 .hero-title {
  font-family: 'Cinzel', serif;
-  font-size: clamp(4rem, 15vw, 9rem);
+  font-size: clamp(4rem, 20vw, 9rem);
   font-weight: 700;
   color: #a38251;
   line-height: 0.9;
