@@ -390,6 +390,228 @@ body {
 }
 
 
+
+
+
+
+.shuttle-luxury-section {
+  padding: 80px 5%;
+  background-color: transparent;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.shuttle-luxury-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.shuttle-luxury-content {
+  flex: 1;
+  max-width: 650px;
+}
+
+.shuttle-subtitle {
+  font-family: var(--font-heading), serif;
+  font-size: 0.8rem;
+  color: var(--color-gold);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.shuttle-title {
+  font-family: var(--font-heading), serif;
+  font-size: 2.0rem;
+  color: var(--color-text-main);
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0 0 15px 0;
+}
+
+.shuttle-divider {
+  width: 50px;
+  height: 1px;
+  background-color: var(--color-gold);
+  margin-bottom: 20px;
+}
+
+.shuttle-description {
+  font-size: 0.85rem;
+  color: #777;
+  line-height: 1.5;
+  margin: 0 0 25px 0;
+}
+
+.shuttle-highlight {
+  display: block;
+  margin-top: 12px;
+  font-weight: 600;
+  color: var(--color-text-main);
+  position: relative;
+  padding-left: 15px;
+}
+
+.shuttle-highlight::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 4px;
+  height: 4px;
+  background-color: var(--color-gold);
+  border-radius: 50%;
+}
+
+.shuttle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 24px;
+  background: var(--color-gold);
+  color: var(--color-white);
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 10px rgba(176, 141, 87, 0.2);
+  transition: transform var(--transition-speed, 0.3s) cubic-bezier(0.25, 1, 0.5, 1);
+  cursor: pointer;
+  backface-visibility: hidden;
+  will-change: transform;
+}
+
+.shuttle-btn:hover {
+  transform: scale(1.02);
+}
+
+.shuttle-luxury-image {
+  flex: 1;
+  height: 380px;
+  position: relative;
+  width: 100%;
+}
+
+.shuttle-image-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--border-radius, 15px);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  transition: transform var(--transition-speed, 0.3s);
+  overflow: hidden;
+  position: relative;
+}
+
+.shuttle-price-badge {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background-color: #f4f4f0;
+  color: #242424;
+  padding: 8px 18px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 100px;
+  z-index: 10;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.shuttle-responsive-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.shuttle-luxury-container:hover .shuttle-image-inner {
+  transform: translateY(-5px);
+}
+
+@media (max-width: 992px) {
+  :root {
+    --responsive-img-width: 390px;
+    --responsive-img-height: 215px;
+  }
+  .shuttle-luxury-container {
+    flex-direction: column;
+    gap: 35px;
+  }
+  .shuttle-luxury-content {
+    max-width: 100%;
+    width: 100%;
+    order: 2;
+  }
+  .shuttle-luxury-image {
+    flex: none !important;
+    width: var(--responsive-img-width) !important;
+    height: var(--responsive-img-height) !important;
+    max-width: 100% !important;
+    margin: 0 auto;
+    order: 1;
+  }
+}
+
+@media (max-width: 580px) {
+  .shuttle-luxury-section {
+    padding: 30px 5%;
+  }
+  .shuttle-luxury-container {
+    gap: 20px;
+  }
+  .shuttle-subtitle {
+    font-size: 0.8rem;
+    margin-bottom: 6px;
+  }
+  .shuttle-title {
+    font-size: 1.3rem;
+    line-height: 1.25;
+    margin-bottom: 10px;
+  }
+  .shuttle-divider {
+    margin-bottom: 12px;
+  }
+  .shuttle-description {
+    font-size: 0.78rem;
+    line-height: 1.4;
+    margin-bottom: 15px;
+  }
+  .shuttle-highlight {
+    font-size: 0.78rem;
+    margin-top: 8px;
+  }
+  .shuttle-btn {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px 20px;
+    font-size: 0.8rem;
+  }
+  .shuttle-price-badge {
+    bottom: 15px;
+    left: 15px;
+    padding: 6px 14px;
+    font-size: 0.85rem;
+  }
+}
+
+
+
+
+
+
+
+
 /*------------------------------------------ Trips Section -------------------------------------------------*/
 
 
@@ -536,204 +758,6 @@ body {
   .trip-card__title { font-size: 1.1rem; }
   .trip-card__description { font-size: 0.8rem; margin-bottom: 15px; }
 }
-
-
-
-
-
-
-.shuttle-luxury-section {
-  padding: 80px 5%;
-  background-color: transparent;
-  width: 100%;
-  box-sizing: border-box;
-  overflow: hidden;
-}
-
-.shuttle-luxury-container {
-  max-width: 1400px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 50px;
-}
-
-.shuttle-luxury-content {
-  flex: 1;
-  max-width: 650px;
-}
-
-.shuttle-subtitle {
-  font-family: var(--font-heading), serif;
-  font-size: 0.8rem;
-  color: var(--color-gold);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  display: block;
-  margin-bottom: 10px;
-  font-weight: 700;
-}
-
-.shuttle-title {
-  font-family: var(--font-heading), serif;
-  font-size: 2.0rem;
-  color: var(--color-text-main);
-  font-weight: 600;
-  line-height: 1.2;
-  margin: 0 0 15px 0;
-}
-
-.shuttle-divider {
-  width: 50px;
-  height: 1px;
-  background-color: var(--color-gold);
-  margin-bottom: 20px;
-}
-
-.shuttle-description {
-  font-size: 0.85rem;
-  color: #777;
-  line-height: 1.5;
-  margin: 0 0 25px 0;
-}
-
-.shuttle-highlight {
-  display: block;
-  margin-top: 12px;
-  font-weight: 600;
-  color: var(--color-text-main);
-  position: relative;
-  padding-left: 15px;
-}
-
-.shuttle-highlight::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 6px;
-  width: 4px;
-  height: 4px;
-  background-color: var(--color-gold);
-  border-radius: 50%;
-}
-
-.shuttle-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 24px;
-  background: var(--color-gold);
-  color: var(--color-white);
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  box-shadow: 0 4px 10px rgba(176, 141, 87, 0.2);
-  transition: transform var(--transition-speed, 0.3s) cubic-bezier(0.25, 1, 0.5, 1);
-  cursor: pointer;
-  backface-visibility: hidden;
-  will-change: transform;
-}
-
-.shuttle-btn:hover {
-  transform: scale(1.02);
-}
-
-.shuttle-luxury-image {
-  flex: 1;
-  height: 380px;
-  position: relative;
-  width: 100%;
-}
-
-.shuttle-image-inner {
-  width: 100%;
-  height: 100%;
-  border-radius: var(--border-radius, 15px);
-  border: 1px solid rgba(0, 0, 0, 0.03);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-  transition: transform var(--transition-speed, 0.3s);
-  overflow: hidden;
-}
-
-.shuttle-responsive-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-}
-
-.shuttle-luxury-container:hover .shuttle-image-inner {
-  transform: translateY(-5px);
-}
-
-@media (max-width: 992px) {
-  :root {
-    --responsive-img-width: 390px;
-    --responsive-img-height: 215px;
-  }
-  .shuttle-luxury-container {
-    flex-direction: column;
-    gap: 35px;
-  }
-  .shuttle-luxury-content {
-    max-width: 100%;
-    width: 100%;
-    order: 2;
-  }
-  .shuttle-luxury-image {
-    flex: none !important;
-    width: var(--responsive-img-width) !important;
-    height: var(--responsive-img-height) !important;
-    max-width: 100% !important;
-    margin: 0 auto;
-    order: 1;
-  }
-}
-
-@media (max-width: 580px) {
-  .shuttle-luxury-section {
-    padding: 30px 5%;
-  }
-  .shuttle-luxury-container {
-    gap: 20px;
-  }
-  .shuttle-subtitle {
-    font-size: 0.8rem;
-    margin-bottom: 6px;
-  }
-  .shuttle-title {
-    font-size: 1.3rem;
-    line-height: 1.25;
-    margin-bottom: 10px;
-  }
-  .shuttle-divider {
-    margin-bottom: 12px;
-  }
-  .shuttle-description {
-    font-size: 0.78rem;
-    line-height: 1.4;
-    margin-bottom: 15px;
-  }
-  .shuttle-highlight {
-    font-size: 0.78rem;
-    margin-top: 8px;
-  }
-  .shuttle-btn {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 8px 20px;
-    font-size: 0.8rem;
-  }
-}
-
-
-
-
 
 
 
